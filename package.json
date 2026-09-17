@@ -1,0 +1,40 @@
+{
+  "name": "drafter",
+  "version": "0.99.0",
+  "description": "A simple canvas for notes and connected ideas.",
+  "license": "MIT",
+  "homepage": "https://trowsing.github.io/drafter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowsing/drafter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Trowsing/drafter/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tiptap/pm": "^3.31.3",
+    "@tiptap/react": "^3.31.3",
+    "@tiptap/starter-kit": "^3.31.3",
+    "@xyflow/react": "^12.11.6",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.1.14",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3"
+  }
+}
