@@ -102,9 +102,19 @@
   padding: 0.6em 0.8em;
   border-radius: 4px;
   overflow-x: auto;
+  max-width: 100%;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.86em;
   margin: 0.5em 0;
+}
+
+.shared-typography pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .shared-typography hr {

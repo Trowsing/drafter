@@ -216,7 +216,7 @@ const CanvasTextNodeComponent: React.FC<NodeProps<CanvasTextNodeType>> = ({
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-4 min-w-0">
         {isEditing ? (
           <TipTapEditor
             initialContent={data.html}
