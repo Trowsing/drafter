@@ -28,6 +28,5 @@ Use a separate browser profile so tests do not overwrite your notes.
 - Delete an inactive workspace, reload, and confirm it stays deleted.
 - Delete the active workspace and confirm the remaining workspace opens.
 - Confirm clicking outside the workspace, help, and color menus closes them.
-- Reset the examples and confirm they persist after reload.
 
 The repository does not currently include an automated test suite.

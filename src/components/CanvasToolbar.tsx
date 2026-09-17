@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { Plus, Maximize2, RotateCcw, HelpCircle, Undo2, Redo2 } from 'lucide-react';
+import { Plus, Maximize2, HelpCircle, Undo2, Redo2 } from 'lucide-react';
 import { type PaperCardTheme, PAPER_THEMES, type Workspace } from '../types';
 import { WorkspaceSelector } from './WorkspaceSelector';
 
 interface CanvasToolbarProps {
   onAddNode: (theme: PaperCardTheme) => void;
   onFitView: () => void;
-  onResetSample: () => void;
   onUndo: () => void;
   onRedo: () => void;
   canUndo: boolean;
@@ -26,7 +25,6 @@ interface CanvasToolbarProps {
 export const CanvasToolbar: React.FC<CanvasToolbarProps> = ({
   onAddNode,
   onFitView,
-  onResetSample,
   onUndo,
   onRedo,
   canUndo,
@@ -139,16 +137,6 @@ export const CanvasToolbar: React.FC<CanvasToolbarProps> = ({
         className="p-1.5 rounded-full text-[#6A665E] hover:text-[#2B2A27] hover:bg-[#EFECE6] transition-colors"
       >
         <Maximize2 className="w-3.5 h-3.5" />
-      </button>
-
-      <button
-        id="reset-sample-btn"
-        type="button"
-        onClick={onResetSample}
-        title="Reset diagram"
-        className="p-1.5 rounded-full text-[#6A665E] hover:text-[#2B2A27] hover:bg-[#EFECE6] transition-colors"
-      >
-        <RotateCcw className="w-3.5 h-3.5" />
       </button>
 
       <div className="relative" ref={helpRef}>

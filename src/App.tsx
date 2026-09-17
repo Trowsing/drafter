@@ -523,18 +523,6 @@ function CanvasDiagram() {
     [setNodes, defaultTheme]
   );
 
-  const handleResetSample = useCallback(() => {
-    localStorage.removeItem(STORAGE_KEY);
-    resetHistory(INITIAL_WORKSPACES[0].nodes, INITIAL_WORKSPACES[0].edges);
-    setWorkspaces(cloneSnapshotData(INITIAL_WORKSPACES));
-    setActiveWorkspaceId(INITIAL_WORKSPACES[0].id);
-    setNodes(cloneSnapshotData(INITIAL_WORKSPACES[0].nodes));
-    setEdges(cloneSnapshotData(INITIAL_WORKSPACES[0].edges));
-    setTimeout(() => {
-      fitView({ padding: 0.25, duration: 400 });
-    }, 50);
-  }, [setNodes, setEdges, fitView, resetHistory]);
-
   const onConnect = useCallback(
     (params: Connection) => {
       const source = params.source;
@@ -586,7 +574,6 @@ function CanvasDiagram() {
       <CanvasToolbar
         onAddNode={handleAddNode}
         onFitView={() => fitView({ padding: 0.25, duration: 300 })}
-        onResetSample={handleResetSample}
         onUndo={undo}
         onRedo={redo}
         canUndo={canUndo}

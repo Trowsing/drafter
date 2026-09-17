@@ -23,7 +23,7 @@ Open http://localhost:3000. No API keys, environment variables, or backend are r
 
 ## Storage and privacy
 
-Private by design — everything stays in your browser. Workspaces are saved in your browser's local storage. There is no account, server synchronization, or export feature. Clearing browser data removes your notes. The reset button replaces **all workspaces** with the examples, and deletions cannot be undone.
+This application was designed with privacy as the main goal. Workspaces are saved in your browser's local storage. There is no account or server synchronization. Clearing browser data removes your notes and deleting a workspace cannot be undone. Browser storage is scoped to its origin, so notes saved on localhost do not transfer to the deployed site.
 
 Newsreader and JetBrains Mono are loaded from Google Fonts. This makes requests to Google; note content is not sent to a backend by Drafter.
 
@@ -49,18 +49,6 @@ src/
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development conventions and a manual test checklist.
-
-## Deploy to GitHub Pages
-
-1. Push the project to GitHub.
-2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
-3. Push to `main`, or run **Deploy to GitHub Pages** manually from the **Actions** tab.
-
-The workflow installs dependencies with Bun, builds the app, and deploys `dist/`. The deployment URL appears in the workflow's `github-pages` environment.
-
-The workflow sets `BASE_PATH` from GitHub's Pages configuration, so both repository sites (`https://username.github.io/repository/`) and root sites work without hardcoding the repository name. For a custom domain, configure it in **Settings → Pages** before redeploying.
-
-Local development still uses `/`. Notes saved on localhost do not transfer to the deployed site because browser storage is scoped to its origin.
 
 ## License
 
