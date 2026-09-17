@@ -23,9 +23,9 @@ Open http://localhost:3000. No API keys, environment variables, or backend are r
 
 ## Storage and privacy
 
-This application was designed with privacy as the main goal. Workspaces are saved in your browser's local storage. There is no account or server synchronization. Clearing browser data removes your notes and deleting a workspace cannot be undone. Browser storage is scoped to its origin, so notes saved on localhost do not transfer to the deployed site.
+Workspaces are saved in your browser's local storage. There is no account or server synchronization, so clearing browser data removes your notes. The deployed site and localhost each keep their own separate data.
 
-Newsreader and JetBrains Mono are loaded from Google Fonts. This makes requests to Google; note content is not sent to a backend by Drafter.
+Fonts are loaded from Google Fonts. These are the only external requests.
 
 ## Development
 
